@@ -555,7 +555,7 @@ code {
   left: 4px;
   right: 4px;
   border-radius: 7px;
-  padding: 5px 7px;
+  padding: 5px 5px 5px 6px;
   background: color-mix(in srgb, var(--course) 20%, var(--paper));
   border: 1px solid color-mix(in srgb, var(--course) 55%, transparent);
   border-left: 4px solid var(--course);
@@ -584,7 +584,9 @@ code {
 .block-time,
 .block-sec {
   color: var(--ink-soft);
-  font-size: 0.7rem;
+  font-size: 0.68rem;
+  letter-spacing: -0.01em;
+  font-variant-numeric: tabular-nums;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
