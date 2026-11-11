@@ -29,9 +29,9 @@ export function sectionsConflict(a: Section, b: Section): boolean {
   return false;
 }
 
-/** Sections the solver may pick for a course, after pins and exclusions. */
+/** Sections the solver may pick for a course: not excluded, has meetings, matches the pin. */
 export function candidateSections(course: Course): Section[] {
-  const open = course.sections.filter((s) => !s.excluded);
+  const open = course.sections.filter((s) => !s.excluded && s.meetings.length > 0);
   if (course.pinnedSection) return open.filter((s) => s.id === course.pinnedSection);
   return open;
 }
