@@ -1,0 +1,17 @@
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import App from "./App";
+// Self-hosted fonts: no requests to third parties.
+import "@fontsource/fraunces/600.css";
+import "@fontsource/fraunces/700.css";
+import "@fontsource/inter/400.css";
+import "@fontsource/inter/500.css";
+import "@fontsource/inter/600.css";
+import "@fontsource/jetbrains-mono/500.css";
+import "./styles.css";
+
+createRoot(document.getElementById("root")!).render(
+  <StrictMode>
+    <App />
+  </StrictMode>,
+);
